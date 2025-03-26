@@ -1,0 +1,18 @@
+<div class="order-confirmation">
+    <div class="success-icon">
+        <div><i class="fa fa-check-circle fa-5x" style="color: green;"></i></div>
+    </div>
+    <h1 class="confirmation-title">Thank you. Your order is confirmed</h1>
+    <p class="confirmation-message">Your order has not shipped yet, but this is to be expected as we are not a real store!</p>
+    <div class="actions">
+        <button *ngIf="order" routerLink="/orders/{{order.id}}" class="btn btn-primary">
+            View your order
+        </button>
+        <button *ngIf="!order" routerLink="/orders" class="btn btn-primary">
+            View your orders
+        </button>
+        <button  routerLink="/shop" class="btn btn-primary">
+            Continue Shopping
+        </button>
+    </div>
+  </div>

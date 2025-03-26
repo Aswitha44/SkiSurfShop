@@ -1,0 +1,80 @@
+
+.cart-no {
+    position: absolute;
+    min-height: 16px;
+    min-width: 24px;
+    border-radius: 50%;
+    font-size: 1em;
+    background: #df6919;
+    color: white;
+    text-align: center;
+    top: -12px;
+    right: 32px;
+}
+
+a {
+    text-decoration: none;
+    color: #264E82;
+
+    &.active {
+        color: #df6919;
+    }
+}
+
+
+// General dropdown styles
+.dropdown-menu {
+    background-color: #264E82 ;
+    border: none;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
+  
+    a.dropdown-item {
+      color: white !important; // White text
+      padding: 10px 15px; // Adjust padding for better spacing
+      transition: background-color 0.3s ease-in-out; // Smooth transition
+  
+      &:hover {
+        background-color: #df6919 !important; // Orange background on hover
+        color: white !important; // Keep text white
+      }
+  
+      i {
+        margin-right: 8px; // Add spacing between icons and text
+      }
+    }
+  
+    .dropdown-divider {
+      border-top: 1px solid rgba(255, 255, 255, 0.3); // Light divider for separation
+    }
+  }
+  
+
+.logo {
+    cursor: pointer;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+
+.btn{
+  display: inline-block;
+  
+  border-radius: 6px;
+  font-size: 20px;
+  
+  transition: all 0.2s ease;
+  
+  &.btn-primary {
+      color: #264E82;
+      border: 2px solid #df6919;
+      background-color: transparent;
+      
+      &:hover {
+        
+        background-color: #df6919;
+        color: white;
+      }
+    }
+}     

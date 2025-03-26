@@ -1,0 +1,19 @@
+<carousel [isAnimated]="true" [interval]="3000" [(activeSlide)]="activeSlide" (activeSlideChange)="onSlideChange()">
+  <slide>
+    <img src="assets/images/test7.jpeg" alt="slide" style="display: block; width: 100%;">
+  </slide>
+  <slide>
+    <img src="assets/images/test8.jpg" alt="slide" style="display: block; width: 100%;">
+  </slide>
+  <slide>
+    <img src="assets/images/hero7.jpg" alt="slide" style="display: block; width: 100%;">
+  </slide>
+
+  <!-- Typing Effect Overlay -->
+  <div class="carousel-overlay featured">
+    <h1 class="typing-text">
+      <span class="text-primary">{{ displayedText }}</span>
+    </h1>
+  </div>  
+    <button class="btn btn-primary" (click)="onGoToShop()"> Go To Shop</button>
+</carousel>

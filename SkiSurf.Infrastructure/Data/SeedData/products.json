@@ -1,0 +1,146 @@
+[
+  {
+    "Name": "SummitGear Speedster Board 2000",
+    "Description": "The SummitGear Speedster Board 2000 is engineered for ultimate speed and control on any terrain. With a sleek design and advanced materials, it offers both agility and durability, ensuring a smooth ride for even the most experienced skiers.",
+    "Price": 200,
+    "PictureUrl": "assets/images/products/sb-ang1.png",
+    "ProductTypeId": 1,
+    "ProductBrandId": 1
+  },
+  {
+    "Name": "AlpinePulse Green Board 3000",
+    "Description": "The AlpinePulse Green Board 3000 is designed for eco-conscious riders who demand performance. With its innovative green color and lightweight build, this board delivers an incredible balance of speed and control, making it perfect for long mountain runs.",
+    "Price": 150,
+    "PictureUrl": "assets/images/products/sb-ang2.png",
+    "ProductTypeId": 1,
+    "ProductBrandId": 2
+  },
+  {
+    "Name": "K2 Sports Board Speed Rush 3",
+    "Description": "Built for speed and precision, the K2 Sports Board Speed Rush 3 provides exceptional performance on steep slopes. Its cutting-edge construction ensures responsiveness and stability, so you can push your limits with confidence.",
+    "Price": 180,
+    "PictureUrl": "assets/images/products/sb-core1.png",
+    "ProductTypeId": 1,
+    "ProductBrandId": 3
+  },
+  {
+    "Name": "Atomic Super Board",
+    "Description": "The Atomic Super Board is the perfect blend of technology and power. Engineered for aggressive skiers, this board features advanced materials that ensure unmatched performance and control on even the toughest mountain trails.",
+    "Price": 300,
+    "PictureUrl": "assets/images/products/sb-core2.png",
+    "ProductTypeId": 1,
+    "ProductBrandId": 4
+  },
+  {
+    "Name": "Armada Board Super Whizzy Fast",
+    "Description": "The Armada Board Super Whizzy Fast is designed for speed enthusiasts who crave a board that reacts quickly to every movement. It combines a lightweight design with high-performance features, making it ideal for those who love carving down the mountain at lightning speeds.",
+    "Price": 250,
+    "PictureUrl": "assets/images/products/sb-react1.png",
+    "ProductTypeId": 1,
+    "ProductBrandId": 5
+  },
+  {
+    "Name": "Black Diamond Board",
+    "Description": "The Black Diamond Board is perfect for beginners and intermediate riders looking for a board that offers excellent balance, control, and versatility. Designed with user-friendly features, it helps build confidence while providing stability across various snow conditions.",
+    "Price": 120,
+    "PictureUrl": "assets/images/products/sb-ts1.png",
+    "ProductTypeId": 1,
+    "ProductBrandId": 6
+  },
+  {
+    "Name": "SummitGear Blue Hat",
+    "Description": "The SummitGear Blue Hat is a stylish and practical choice for cold weather. Made from high-quality, breathable materials, it keeps you warm while offering a sleek, modern look for skiers and snowboarders alike.",
+    "Price": 10,
+    "PictureUrl": "assets/images/products/hat-core1.png",
+    "ProductTypeId": 2,
+    "ProductBrandId": 1
+  },
+  {
+    "Name": "AlpinePulse Green Woolen Hat",
+    "Description": "The AlpinePulse Green Woolen Hat is perfect for those chilly days on the mountain. Crafted with premium wool, it offers warmth and comfort while complementing your ski gear with its unique green design.",
+    "Price": 8,
+    "PictureUrl": "assets/images/products/hat-react1.png",
+    "ProductTypeId": 2,
+    "ProductBrandId": 2
+  },
+  {
+    "Name": "K2 Sports Purple Woolen Hat",
+    "Description": "The K2 Sports Purple Woolen Hat provides a perfect combination of warmth and style. Its vibrant purple color is sure to turn heads, while the soft wool keeps you cozy during those frosty mountain adventures.",
+    "Price": 15,
+    "PictureUrl": "assets/images/products/hat-react2.png",
+    "ProductTypeId": 2,
+    "ProductBrandId": 3
+  },
+  {
+    "Name": "Atomic Blue Gloves",
+    "Description": "The Atomic Blue Gloves are built for skiers who demand precision and warmth. Featuring advanced insulation and a sleek design, these gloves offer the ultimate comfort and grip, making them perfect for handling any slope.",
+    "Price": 18,
+    "PictureUrl": "assets/images/products/glove-code1.png",
+    "ProductTypeId": 4,
+    "ProductBrandId": 4
+  },
+  {
+    "Name": "Armada Green Gloves",
+    "Description": "The Armada Green Gloves are designed to keep your hands warm and dry while maintaining excellent dexterity. Perfect for all your outdoor snow sports, they combine durability with comfort in a stylish green design.",
+    "Price": 15,
+    "PictureUrl": "assets/images/products/glove-code2.png",
+    "ProductTypeId": 4,
+    "ProductBrandId": 5
+  },
+  {
+    "Name": "Black Diamond Purple Gloves",
+    "Description": "The Black Diamond Purple Gloves offer superior control and warmth for your hands. Whether you're skiing or snowboarding, these gloves provide the perfect combination of flexibility and protection, allowing you to perform at your best.",
+    "Price": 16,
+    "PictureUrl": "assets/images/products/glove-react1.png",
+    "ProductTypeId": 4,
+    "ProductBrandId": 6
+  },
+  {
+    "Name": "SummitGear Green Gloves",
+    "Description": "The SummitGear Green Gloves are the perfect winter accessory for skiers and snowboarders alike. Made with top-quality materials, these gloves keep your hands warm and responsive on even the most challenging slopes.",
+    "Price": 14,
+    "PictureUrl": "assets/images/products/glove-react2.png",
+    "ProductTypeId": 4,
+    "ProductBrandId": 1
+  },
+  {
+    "Name": "AlpinePulse Red Boots",
+    "Description": "The AlpinePulse Red Boots offer unbeatable warmth and comfort for skiers looking to tackle any terrain. With their vibrant red design and robust construction, they provide a secure fit and maximum performance on the mountain.",
+    "Price": 250,
+    "PictureUrl": "assets/images/products/boot-redis1.png",
+    "ProductTypeId": 3,
+    "ProductBrandId": 2
+  },
+  {
+    "Name": "K2 Sports Red Boots",
+    "Description": "The K2 Sports Red Boots are engineered for comfort and precision. With their durable build and responsive fit, these boots provide excellent control, allowing you to glide smoothly down the slopes in style.",
+    "Price": 189.99,
+    "PictureUrl": "assets/images/products/boot-core2.png",
+    "ProductTypeId": 3,
+    "ProductBrandId": 3
+  },
+  {
+    "Name": "Atomic Purple Boots",
+    "Description": "The Atomic Purple Boots are designed for skiers who demand high-performance. Offering a secure fit, responsive cushioning, and excellent grip, they provide the support needed to tackle any slope with confidence.",
+    "Price": 199.99,
+    "PictureUrl": "assets/images/products/boot-core1.png",
+    "ProductTypeId": 3,
+    "ProductBrandId": 4
+  },
+  {
+    "Name": "Armada Purple Boots",
+    "Description": "The Armada Purple Boots combine a bold purple design with cutting-edge ski technology. Built for durability and comfort, they offer a snug fit that ensures maximum control and support during your rides.",
+    "Price": 150,
+    "PictureUrl": "assets/images/products/boot-ang2.png",
+    "ProductTypeId": 3,
+    "ProductBrandId": 5
+  },
+  {
+    "Name": "Black Diamond Blue Boots",
+    "Description": "The Black Diamond Blue Boots are the perfect match for skiers looking for high-performance and comfort. These blue boots provide excellent control, traction, and support, making them ideal for any winter adventure.",
+    "Price": 180,
+    "PictureUrl": "assets/images/products/boot-ang1.png",
+    "ProductTypeId": 3,
+    "ProductBrandId": 6
+  }
+]

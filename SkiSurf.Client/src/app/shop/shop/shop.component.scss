@@ -1,0 +1,10 @@
+.list-group-item {
+    cursor: pointer;
+   
+
+    &:not(.active):hover {
+        color: #fff;
+        background-color: #df6919;
+        border-radius:2px;
+    }
+}

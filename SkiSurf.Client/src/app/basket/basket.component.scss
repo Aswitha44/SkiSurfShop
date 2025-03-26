@@ -1,0 +1,76 @@
+.empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: rgba(250, 247, 247, 0.05);
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+
+      .btn{
+        display: inline-block;
+        padding: 12px 24px;
+        border-radius: 6px;
+        font-size: 16px;
+        font-weight: 500;
+        text-decoration: none;
+        transition: all 0.2s ease;
+        
+        &.btn-primary {
+            color: white;
+            border: 2px solid #df6919;
+            background-color: transparent;
+            
+            &:hover {
+              background-color: #df6919;
+            }
+          }
+      }     
+    
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+    50% {
+      transform: scale(1.1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  // For responsive design
+  @media screen and (max-width: 600px) {
+        .empty{
+        .btn {
+          width: 100%;
+          text-align: center;
+        }
+    }
+  }
+
+  .btn{
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    
+    &.btn-primary {
+        color: white;
+        border: 2px solid #df6919;
+        background-color: transparent;
+        
+        &:hover {
+          background-color: #df6919;
+        }
+      }
+  }   

@@ -1,0 +1,85 @@
+/* Style the Carousel */
+.carousel {
+    position: fixed; /* Ensures it covers the full screen */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Make sure nothing overflows */
+}
+
+/* Make Images Cover the Screen Properly */
+.carousel .slide img {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover; /* Ensures the image covers the space properly */
+    display: block;
+}
+
+/* Improve Welcome Section */
+.featured {
+    position: absolute;    
+    top: 72%;
+    left: 50%;    
+    transform: translateX(-50%);
+    background: rgb(3, 2, 2);
+    padding: 15px 30px;
+    border-radius: 8px;
+    text-align: center;
+    color: white;
+    white-space: nowrap; /* Prevents text from wrapping down */
+}
+.btn-primary {
+    position: absolute;    
+    top: 64%;
+    left: 50%;    
+    transform: translateX(-50%);
+    background: black;   
+    border-color: black; 
+    border-radius: 810px;
+    text-align: center;
+    color: #de6c20;
+    font-size: 1.5rem;
+&:hover {
+    border-color: #de6c20;
+    background: #de6c20;
+    color: white;    
+}}
+.featured h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0; /* Prevents any unwanted space */
+}
+
+/* Ensure no scrollbar issues */
+* {
+    max-width: 100vw;
+    max-height: 100vh;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.cursor {
+    color: black;
+    animation: blink 0.7s infinite;
+  }
+  
+  @keyframes blink {
+    50% { opacity: 0; }
+  }
+
+  
+/* Responsive Fixes */
+@media (max-width: 768px) {
+    .featured {
+        bottom: 5%;
+        padding: 10px 20px;
+    }
+
+    .featured h1 {
+        font-size: 1.8rem;
+    }
+}

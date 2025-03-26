@@ -1,0 +1,35 @@
+// Global rounding for all UI elements
+.card,
+.list-group,
+.form-control,
+.form-select,
+.btn,
+.input-group,
+.dropdown-menu,
+.nav-tabs .nav-link,
+.badge,
+.alert,
+.app-product-item,
+.container-fluid {
+  border-radius: 6px !important;
+ 
+}
+
+.pagination {
+    border-radius: 8px;
+        
+    // Round only the first and last page links
+    .page-item:first-child .page-link {
+      border-top-left-radius: 8px !important;
+      border-bottom-left-radius: 8px !important;
+    }
+    
+    .page-item:last-child .page-link {
+      border-top-right-radius: 8px !important;
+      border-bottom-right-radius: 8px !important;
+    }
+    
+   
+ 
+  }
+
