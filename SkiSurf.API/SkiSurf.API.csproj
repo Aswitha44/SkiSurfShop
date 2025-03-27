@@ -2,9 +2,10 @@
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
-    <Nullable>disable</Nullable>
+    <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <InvariantGlobalization>false</InvariantGlobalization>
+	  
   </PropertyGroup>
 
   <ItemGroup>
@@ -30,8 +31,9 @@
   <ItemGroup>
     <ProjectReference Include="..\SkiSurf.Infrastructure\SkiSurf.Infrastructure.csproj" />
   </ItemGroup>
+	
 
-  <ItemGroup>
+	<ItemGroup>
     <Folder Include="wwwroot\" />
   </ItemGroup>
 
