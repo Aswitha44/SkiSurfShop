@@ -7,7 +7,7 @@ namespace SkiSurf.API.DTOs
         [Required]
         public int Id { get; set; }
         [Required]
-        public string ProductName { get; set; }
+        public required string ProductName { get; set; }
         [Required]
         [Range(0.10, double.MaxValue, ErrorMessage ="Price must be greater than 0")]
         public decimal Price { get; set; }
@@ -15,11 +15,11 @@ namespace SkiSurf.API.DTOs
         [Range(1,double.MaxValue, ErrorMessage = "Quantity must be atleast 1")]
         public int Quantity { get; set; }
         [Required]
-        public string PictureUrl { get; set; }
+        public required string PictureUrl { get; set; }
         [Required]
-        public string Brand { get; set; }
+        public required string Brand { get; set; }
         [Required]
-        public string Type { get; set; }
+        public required string Type { get; set; }
 
     }
 }

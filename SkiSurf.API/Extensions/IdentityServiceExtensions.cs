@@ -30,7 +30,7 @@ namespace SkiSurf.API.Extensions
                 options.TokenValidationParameters = new TokenValidationParameters
                 {
                     ValidateIssuerSigningKey = true,
-                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(config["Token:Key"])),
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(config["Token:Key"] ?? string.Empty)),
                     ValidIssuer = config["Token:Issuer"],
                     ValidateIssuer = true,
                     ValidateAudience = false
