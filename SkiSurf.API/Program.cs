@@ -48,9 +48,17 @@ builder.Services.AddDbContext<StoreContext>(options => options.UseSqlServer(buil
 
 builder.Services.AddSingleton<IConnectionMultiplexer>(c =>
 {
-    var options = ConfigurationOptions.Parse(builder.Configuration.GetConnectionString("Redis"));
+    var redisConnectionString = builder.Configuration.GetConnectionString("Redis");
+    if (string.IsNullOrEmpty(redisConnectionString))
+    {
+        throw new InvalidOperationException("Redis connection string is missing.");
+    }
+
+    var options = ConfigurationOptions.Parse(redisConnectionString);
+    options.AbortOnConnectFail = false; // You may want to disable aborting on failed connection
     return ConnectionMultiplexer.Connect(options);
 });
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 
 
