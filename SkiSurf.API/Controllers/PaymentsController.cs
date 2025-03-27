@@ -13,13 +13,18 @@ namespace SkiSurf.API.Controllers
  
     public class PaymentsController : BaseApiController
     {
-        private const string WhSecret = "whsec_8198facf695216ba45c3b00eeea8df19ac7bd7382f18dc5aff09b7ff99947ae8";
+        private string _whSecret;
         private readonly IPaymentService _paymentService;
         private readonly ILogger<PaymentsController> _logger;
+        private readonly IConfiguration _config;
 
-        public PaymentsController(IPaymentService paymentService,ILogger<PaymentsController> logger) { 
+        public PaymentsController(IPaymentService paymentService,ILogger<PaymentsController> logger,IConfiguration config) { 
          _paymentService = paymentService;
             _logger = logger;
+            _config =config;
+            _whSecret = _config["StripeSettings:WhSecret"];
+
+
         }
 
         [Authorize]
