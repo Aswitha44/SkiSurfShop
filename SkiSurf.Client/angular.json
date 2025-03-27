@@ -20,7 +20,7 @@
             "allowedCommonJsDependencies": [
               "cuid"
             ],
-            "outputPath": "C:\\Users\\abhin\\SkiSurfWeb\\SkiSurf.API\\wwwroot",
+            "outputPath": "../SkiSurf.API/wwwroot",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [

@@ -29,8 +29,8 @@ yarn-error.log
 .history/*
 
 #vs code IMP INFO
-#appsettings.Development.json
-#appsettings.json
+appsettings.Development.json
+appsettings.json
 
 # Miscellaneous
 /.angular/cache
