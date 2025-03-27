@@ -39,6 +39,7 @@ builder.Services.AddCors(options =>
         builder => builder
             .AllowAnyMethod()
             .AllowCredentials()
+            .WithOrigins("https://skisurfshop.azurewebsites.net")
             .SetIsOriginAllowed((host) => true)
             .AllowAnyHeader());
 });
