@@ -28,6 +28,10 @@ yarn-error.log
 !.vscode/extensions.json
 .history/*
 
+#vs code IMP INFO
+appsettings.Development.json
+appsettings.json
+
 # Miscellaneous
 /.angular/cache
 .sass-cache/
