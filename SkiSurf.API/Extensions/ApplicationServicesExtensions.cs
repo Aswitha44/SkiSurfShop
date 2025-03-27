@@ -45,7 +45,7 @@ namespace SkiSurf.API.Extensions
             {
                 opt.AddPolicy("CorsPolicy", policy =>
                 {
-                    policy.AllowAnyHeader().AllowAnyMethod().WithOrigins("https://localhost:7100");
+                    policy.AllowAnyHeader().AllowAnyMethod().WithOrigins("https://skisurfshop.azurewebsites.net","https://localhost:7100");
                 });
             });
 

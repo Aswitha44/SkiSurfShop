@@ -1,4 +1,4 @@
 export const environment={
     production: true,
-    apiUrl:'https://skisurfshop.azurewebsites.net/'
+    apiUrl:'https://skisurfshop.azurewebsites.net/api/'
 };

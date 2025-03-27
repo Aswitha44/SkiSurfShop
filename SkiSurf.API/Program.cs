@@ -71,6 +71,7 @@ app.UseStatusCodePagesWithReExecute("/error/{0}");
 app.UseSwaggerDocumentation();
 
 
+app.UseCors("AllowAngularApp");
 app.UseHttpsRedirection();
 
 app.UseStaticFiles();
