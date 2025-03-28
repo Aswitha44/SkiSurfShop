@@ -17,14 +17,13 @@ import { CheckoutService } from '../checkout.service';
 })
 export class CheckoutPaymentComponent implements OnInit {
   @Input() checkoutForm?: FormGroup;
-  @ViewChild('cardNumber', { static: true }) cardNumberElement?: ElementRef;
-  @ViewChild('cardExpiry', { static: true }) cardExpiryElement?: ElementRef;
-  @ViewChild('cardCvc', { static: true }) cardCvcElement?: ElementRef;
+  @ViewChild('cardNumber') cardNumberElement?: ElementRef;
+  @ViewChild('cardExpiry') cardExpiryElement?: ElementRef;
+  @ViewChild('cardCvc') cardCvcElement?: ElementRef;
   stripe: Stripe | null = null;
   cardNumber?: StripeCardNumberElement;
   cardExpiry?: StripeCardExpiryElement;
   cardCvc?: StripeCardCvcElement;
-  cardHandler = this.onChange.bind(this);
   cardNumberComplete = false;
   cardExpiryComplete = false;
   cardCvcComplete = false;
@@ -33,27 +32,41 @@ export class CheckoutPaymentComponent implements OnInit {
 
   constructor(private basketService: BasketService, private checkoutService: CheckoutService, 
       private toastr: ToastrService, private router: Router) {}
+ 
   ngOnInit(): void {
   
   }
 
  ngAfterViewInit(): void {
-    loadStripe('pk_test_51PeSCiRxGAGT7qNlGsvEblTtMTvAqhwZbw2Vya8KM3AKtmOISx4yWykpCK29qZ8AeqhInpaKJLrp870LYTLOfZkj007zdXgyEA').
-      then(stripe => { stripe = stripe; })
-    const elements = this.stripe?.elements();
+  loadStripe('pk_test_51PeSCiRxGAGT7qNlGsvEblTtMTvAqhwZbw2Vya8KM3AKtmOISx4yWykpCK29qZ8AeqhInpaKJLrp870LYTLOfZkj007zdXgyEA').then(stripe => {
+    this.stripe = stripe;
+    const elements = stripe?.elements();
     if (elements) {
       this.cardNumber = elements.create('cardNumber');
       this.cardNumber.mount(this.cardNumberElement?.nativeElement);
-      this.cardNumber.on('change', this.cardHandler);
-  
+      this.cardNumber.on('change', event => {
+        this.cardNumberComplete = event.complete;
+        if (event.error) this.cardErrors = event.error.message;
+        else this.cardErrors = null;
+      })
+
       this.cardExpiry = elements.create('cardExpiry');
       this.cardExpiry.mount(this.cardExpiryElement?.nativeElement);
-      this.cardExpiry.on('change', this.cardHandler);
-  
+      this.cardExpiry.on('change', event => {
+        this.cardExpiryComplete = event.complete;
+        if (event.error) this.cardErrors = event.error.message;
+        else this.cardErrors = null;
+      })
+
       this.cardCvc = elements.create('cardCvc');
       this.cardCvc.mount(this.cardCvcElement?.nativeElement);
-      this.cardCvc.on('change', this.cardHandler);
+      this.cardCvc.on('change', event => {
+        this.cardCvcComplete = event.complete;
+        if (event.error) this.cardErrors = event.error.message;
+        else this.cardErrors = null;
+      })
     }
+  })
   }
 
   ngOnDestroy(): void {
@@ -61,7 +74,7 @@ export class CheckoutPaymentComponent implements OnInit {
     this.cardExpiry?.destroy();
     this.cardCvc?.destroy();
   }
-  
+
   get paymentFormComplete() {
     return this.checkoutForm?.get('paymentForm')?.valid 
       && this.cardNumberComplete 
@@ -70,24 +83,6 @@ export class CheckoutPaymentComponent implements OnInit {
   }
 
 
-  onChange(event:any) {
-    if (event.error) {
-      this.cardErrors = event.error.message;
-    } else {
-      this.cardErrors = null;
-    }
-    switch(event.elementType) {
-      case 'cardNumber':
-        this.cardNumberComplete = event.complete;
-        break;
-      case 'cardExpiry':
-        this.cardExpiryComplete = event.complete;
-        break;
-      case 'cardCvc':
-        this.cardCvcComplete = event.complete;
-        break;
-    }
-  }
 
   async submitOrder() {
     this.loading = true;
