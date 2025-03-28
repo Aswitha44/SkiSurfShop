@@ -61,8 +61,9 @@ export class CheckoutPaymentComponent implements OnInit {
     this.cardExpiry?.destroy();
     this.cardCvc?.destroy();
   }
+  
   get paymentFormComplete() {
-    return this.checkoutForm?.get('checkoutForm')?.valid 
+    return this.checkoutForm?.get('paymentForm')?.valid 
       && this.cardNumberComplete 
       && this.cardExpiryComplete 
       && this.cardCvcComplete
