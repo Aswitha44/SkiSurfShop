@@ -28,10 +28,10 @@ export class HomeComponent {
   }
 
   onSlideChange(): void {
-    this.fullText = this.texts[this.activeSlide]; // Get text for the active slide
-    this.displayedText = ''; // Clear text
-    this.charIndex = 0; // Reset typing index
-    this.typeText(); // Restart typing effect
+    this.fullText = this.texts[this.activeSlide]; 
+    this.displayedText = '';  
+    this.charIndex = 0;  
+    setTimeout(() => this.typeText(), 300); 
   }
 
   typeText(): void {

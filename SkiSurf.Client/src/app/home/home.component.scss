@@ -22,11 +22,11 @@
 /* Improve Welcome Section */
 .featured {
     position: absolute;    
-    top: 72%;
+    top: 64%;
     left: 50%;    
     transform: translateX(-50%);
-    background: rgb(3, 2, 2);
-    padding: 15px 30px;
+    background: rgb(230, 226, 226);
+        padding: 10px 10px;
     border-radius: 8px;
     text-align: center;
     color: white;
@@ -34,20 +34,16 @@
 }
 .btn-primary {
     position: absolute;    
-    top: 64%;
+    top: 76%;
     left: 50%;    
     transform: translateX(-50%);
-    background: black;   
-    border-color: black; 
-    border-radius: 810px;
-    text-align: center;
-    color: #de6c20;
-    font-size: 1.5rem;
-&:hover {
     border-color: #de6c20;
     background: #de6c20;
     color: white;    
-}}
+    border-radius: 810px;
+    text-align: center;
+    font-size: 1.5rem;
+}
 .featured h1 {
     font-size: 2.5rem;
     font-weight: bold;
