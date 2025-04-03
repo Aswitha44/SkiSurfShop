@@ -9,19 +9,22 @@
             <div class="form-floating">
                 <div class="form-control" #cardNumber></div>
                 <label>Card Number</label>
-                <span class="text-danger">{{cardErrors}}</span>
+                <span>Use Test Card: 4242 4242 4242 4242</span>
+                <div class="text-danger">{{cardErrors}}</div>
             </div>
         </div>
         <div class="col-3">
             <div class="form-floating">
-                <div class="form-control" #cardExpiry></div>
+                <div class="form-control" #cardExpiry></div>               
                 <label>Card Expiry</label>
+                <span>Any future date</span>
             </div>
         </div>
         <div class="col-3">
             <div class="form-floating">
                 <div class="form-control" #cardCvc></div>
-                <label>Card Cvc</label>
+                <label></label>
+                <span>Any CVC</span>
             </div>
         </div>
     </div>

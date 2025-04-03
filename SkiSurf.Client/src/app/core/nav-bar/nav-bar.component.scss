@@ -1,4 +1,3 @@
-
 .cart-no {
     position: absolute;
     min-height: 16px;
@@ -10,71 +9,122 @@
     text-align: center;
     top: -12px;
     right: 32px;
+    transition: transform 0.2s ease;
 }
 
 a {
     text-decoration: none;
     color: #264E82;
+    transition: color 0.2s ease;
 
     &.active {
         color: #df6919;
     }
 }
 
+// Mobile menu styles
+.mobile-menu {
+    @media (max-width: 767.98px) {
+        display: none;
+        width: 100%;
+        text-align: center;
+        padding: 1rem 0;
+        background: white;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        animation: slideDown 0.3s ease-out;
+        
+        &.show {
+            display: block;
+        }
+    }
+
+    @media (min-width: 768px) {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+    }
+}
 
 // General dropdown styles
 .dropdown-menu {
-    background-color: #264E82 ;
+    background-color: #264E82;
     border: none;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.2s ease-out;
   
     a.dropdown-item {
-      color: white !important; // White text
-      padding: 10px 15px; // Adjust padding for better spacing
-      transition: background-color 0.3s ease-in-out; // Smooth transition
-  
-      &:hover {
-        background-color: #df6919 !important; // Orange background on hover
-        color: white !important; // Keep text white
-      }
-  
-      i {
-        margin-right: 8px; // Add spacing between icons and text
-      }
+        color: white !important;
+        padding: 10px 15px;
+        transition: all 0.2s ease;
+    
+        &:hover {
+            background-color: #df6919 !important;
+            color: white !important;
+            transform: translateX(5px);
+        }
+    
+        i {
+            margin-right: 8px;
+            transition: transform 0.2s ease;
+        }
     }
   
     .dropdown-divider {
-      border-top: 1px solid rgba(255, 255, 255, 0.3); // Light divider for separation
+        border-top: 1px solid rgba(255, 255, 255, 0.3);
     }
-  }
-  
+}
 
 .logo {
     cursor: pointer;
+    transition: transform 0.2s ease;
+
+    &:hover {
+        transform: scale(1.05);
+    }
 
     &:focus {
         outline: none;
     }
 }
 
-
-.btn{
-  display: inline-block;
-  
-  border-radius: 6px;
-  font-size: 20px;
-  
-  transition: all 0.2s ease;
-  
-  &.btn-primary {
-      color: #264E82;
-      border: 2px solid #df6919;
-      background-color: transparent;
-      
-      &:hover {
+.btn {
+    display: inline-block;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: all 0.2s ease;
+    
+    &.btn-primary {
+        color: #264E82;
+        border: 2px solid #df6919;
+        background-color: transparent;
         
-        background-color: #df6919;
-        color: white;
-      }
+        &:hover {
+            background-color: #df6919;
+            color: white;
+            transform: translateY(-2px);
+        }
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
     }
 }     

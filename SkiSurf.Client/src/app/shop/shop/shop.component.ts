@@ -22,6 +22,7 @@ export class ShopComponent implements OnInit{
     {name:'Price: High to low',value:'priceDesc'}
   ];
   totalCount=0;
+  isSidebarOpen = false;
 
   constructor(private shopService:ShopService){}
   ngOnInit(): void {
@@ -90,6 +91,10 @@ onReset(){
  if(this.searchTerm) this.searchTerm.nativeElement.value = '';
  this.shopParams = new shopParams();
  this.getProducts();
+}
+
+toggleSidebar() {
+  this.isSidebarOpen = !this.isSidebarOpen;
 }
 
 }

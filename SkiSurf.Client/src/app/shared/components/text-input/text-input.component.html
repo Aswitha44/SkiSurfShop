@@ -16,7 +16,7 @@
     <div class="invalid-feedback" *ngIf="(!controlDir?.control?.valid && controlDir?.control?.touched)">
         <span *ngIf="controlDir.control.errors?.required">{{label}} is required</span>
         <span *ngIf="controlDir.control?.errors?.['email']">Invalid email address</span>
-        <span *ngIf="controlDir.control.errors?.pattern">Password must have 1 Uppercase, 1 Lowercase, 1 non-alphanumeric character, and 6-10 characters.
+        <span *ngIf="controlDir.control.errors?.pattern">Password must have 1 Uppercase, 1 Lowercase, 1 non-alphanumeric character, and 8-20 characters.
         </span>        
     </div>
 

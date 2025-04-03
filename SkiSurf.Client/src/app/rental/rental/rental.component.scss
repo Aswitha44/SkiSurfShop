@@ -1,0 +1,24 @@
+/* Full-page centered layout */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Title styling */
+.title {
+    font-style: italic;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Responsive Image */
+.responsive-img {
+    max-width: 100%;
+    height: auto;
+}

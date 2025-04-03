@@ -6,7 +6,7 @@
         </div>
         <div class="col-6 mt-5">
             <h2>{{product.name}}</h2>
-            <p style="font-size: 2em;">{{product.price | currency}}</p>
+            <p style="font-size: 2em;font-style: italic;">{{product.price | currency}}</p>
 
             <h5 class="text-primary mb-3" *ngIf="quantityInBasket > 0">
                 You have {{quantityInBasket}} of this item in your basket
@@ -14,24 +14,25 @@
 
             <div class="d-flex justify-content-start align-items-center">
                 <i 
-                    (click)="decrementQuantity()"
-                    class="fa fa-minus-circle text-warning me-2" 
-                    style="cursor: pointer; font-size: 2em;"></i>
+                    (click)="quantity > 0 && decrementQuantity()"
+                    [ngClass]="{'text-muted': quantity <= 0}"
+                    class="fa fa-minus-circle me-2" 
+                    style="cursor: pointer; font-size: 2em;color: #df6919 "></i>
                 <span class="font-weight-bold" style="font-size: 1.5em;">
                     {{quantity}}
                 </span>
                 <i 
                     (click)="incrementQuantity()"
-                    class="fa fa-plus-circle text-warning ms-2" 
-                    style="cursor: pointer; font-size: 2em;"></i>
+                    class="fa fa-plus-circle ms-2" 
+                    style="cursor: pointer; font-size: 2em;color: #df6919 "></i>
                 <button 
-                    class="btn btn-outline-primary ms-4"
+                    class="btn btn-outline-success ms-4"
                     (click)="updateBasket()"
                     [disabled]="quantity === quantityInBasket"
                 >{{buttonText}}</button>
             </div>
-            <div class="row mt-4">
-                <h4>Description</h4>
+            <div class="row mt-4" style="font-style:italic">
+                <h4 style="text-decoration:underline">Description</h4>
                 <p>{{product.description}}</p>
             </div>
         </div>

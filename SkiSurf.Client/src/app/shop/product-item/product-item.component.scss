@@ -1,22 +1,71 @@
-.btn {
-    width: 30%;
-    height: 40px;
+.btn:hover {
+    background-color: #ff8c42;
+    transform: scale(1.1);
+    transition: all 0.2s ease;
 }
 
-.btn-primary{
-    background: #cf7b37;
+.cart-icon {
+    background-color: #df6919;
     color: white;
-   
-}
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1em;
+    transition: all 0.3s ease-in-out;
+    border: none;
 
-.image :hover {
-    opacity: 1;
-    & button {
-        transform: none;
-        opacity: 1;
+    &:hover {
+        background-color: #ff8c42;
+        transform: scale(1.1);
     }
 }
 
+/* Eye Icon Styling */
+.eye-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #df6919;
+    color: white;
+    font-size: 1.2em;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+
+    &:hover {
+        background-color: #ff8c42;
+        transform: scale(1.2);
+    }
+}
+
+.d-flex.justify-content-between {
+    display: flex;
+    justify-content: space-between; /* Aligns the name and cart button at the two extremes */
+    align-items: center;
+}
+
+.image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+
+    img {
+        transition: transform 0.3s ease;
+    }
+
+    &:hover {
+        img {
+            transform: scale(1.05);
+        }
+    }
+}
+
+/* Hover Overlay Effect */
 .hover-overlay {
     position: absolute;
     width: 100%;
@@ -25,20 +74,80 @@
     left: 0;
     background: rgba(222, 215, 215, 0.5);
     opacity: 0;
-    transition: all 0.5s;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-    & button {
-        z-index: 1000;
-        transition: all 0.5s;
-    }
+.image:hover .hover-overlay {
+    opacity: 1;
+}
 
-    & button:first-of-type {
-        transform: translateX(-20px);
-    }
+/* Make sure product cards adjust dynamically */
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    border-radius: 8px;
+    overflow: hidden;
 
-    & button:last-of-type {
-        transform: translateX(20px);
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     }
 }
 
+/* Ensure product images are responsive */
+.image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Product name styling */
+.text-uppercase {
+    transition: color 0.2s ease;
+
+    &:hover {
+        color: #ff8c42 !important;
+    }
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 768px) {
+    .card {
+        margin-bottom: 1rem;
+    }
+
+    .cart-icon {
+        width: 30px;
+        height: 30px;
+        font-size: 1em;
+    }
+
+    .eye-icon {
+        width: 28px;
+        height: 28px;
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 576px) {
+    .cart-icon {
+        width: 28px;
+        height: 28px;
+        font-size: 0.9em;
+    }
+
+    .eye-icon {
+        width: 25px;
+        height: 25px;
+        font-size: 0.9em;
+    }
+}
 

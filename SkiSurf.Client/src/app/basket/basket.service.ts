@@ -5,6 +5,7 @@ import { environment } from 'src/environments/environment';
 import { Basket, BasketItem, BasketTotals } from '../shared/models/basket';
 import { DeliveryMethod } from '../shared/models/deliveryMethod';
 import { Product } from '../shared/models/product';
+import { ToastrService } from 'ngx-toastr';
 
 @Injectable({
   providedIn: 'root'
@@ -17,7 +18,7 @@ export class BasketService {
   basketTotalSource$ = this.basketTotalSource.asObservable();
   
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient,private toastr:ToastrService) { }
 
   createPaymentIntent() {
     return this.http.post<Basket>(this.baseUrl + 'payments/' + this.getCurrentBasketValue()?.id, {})
@@ -64,6 +65,7 @@ export class BasketService {
     const basket = this.getCurrentBasketValue() ?? this.createBasket();
     basket.items = this.addOrUpdateItem(basket.items, item, quantity);
     this.setBasket(basket);
+    this.toastr.success('Added to cart', item.productName);
   }
 
   removeItemFromBasket(id: number, quantity = 1) {
